@@ -1092,10 +1092,6 @@ let postsData = [
     const container = document.getElementById('topics-posts-container');
     let html = '';
 
-    if (feedError) {
-      html += `<p class="md:col-span-2 text-xs text-koko-coral">Live Substack feed did not load (${escapeHtml(feedError)}). Showing sample posts.</p>`;
-    }
-
     if (list.length === 0) {
       html += '<p class="md:col-span-2 text-sm text-gray-400">No posts match that filter yet.</p>';
       container.innerHTML = html;
