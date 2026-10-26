@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOKO WINTERS | Koko in the Morning Show, Advice, & Gaming</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Brush+Script&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            koko: {
+              lavender: '#C8B4FF',
+              lilac: '#E7D8FF',
+              mint: '#B6F2D9',
+              blue: '#6C9EFF',
+              pink: '#F5C1CE',
+              coral: '#FF8FA7',
+              cream: '#FFF8EE',
+              yellow: '#FAEDCB',
+              charcoal: '#2E2E3A',
+              darkBg: '#0d0c1d',
+              cardBg: '#161329'
+            }
+          },
+          fontFamily: {
+            bebas: ['"Bebas Neue"', 'sans-serif'],
+            montserrat: ['"Montserrat"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif'],
+            handwriting: ['"Nanum Brush Script"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #13131A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2E2E3A;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF8FA7;
+    }
+
+    /* Subtle Animated Gradients */
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(200,180,255,0.25) 0%, rgba(245,193,206,0.2) 40%, rgba(108,158,255,0.25) 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    .confessional-gradient {
+      background: linear-gradient(135deg, #FAEDCB 0%, #F5C1CE 50%, #E7D8FF 100%);
+    }
+
+    .haute-gradient {
+      background: linear-gradient(135deg, rgba(255,143,167,0.15) 0%, rgba(200,180,255,0.2) 100%);
+    }
+
+    .nitekap-gradient {
+      background: linear-gradient(135deg, rgba(108,158,255,0.2) 0%, rgba(182,242,217,0.15) 100%);
+    }
+
+    .community-gradient {
+      background: linear-gradient(135deg, #C8B4FF 0%, #6C9EFF 50%, #B6F2D9 100%);
+    }
+
+    .glass-card {
+      background: rgba(22, 19, 41, 0.7);
+      backdrop-filter: blur(12px);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glows & Transitions */
+    .glow-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glow-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px -8px rgba(200, 180, 255, 0.3);
+    }
+
+    .glow-coral:hover {
+      box-shadow: 0 12px 30px -8px rgba(255, 143, 167, 0.4);
+    }
+
+    .glow-blue:hover {
+      box-shadow: 0 12px 30px -8px rgba(108, 158, 255, 0.4);
+    }
+
+    /* Ticker Loop */
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: ticker 25s linear infinite;
+  }
+    .animate-ticker:hover {
+      animation-play-state: paused;
+    }
+
+    /* PEACH OMBRE for HomePg Letters */
+    .peach-ombre {
+  background: linear-gradient(180deg, #FFF3E0 0%, #FFCFA0 50%, #FFA86B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+     /* Visualizer Equalizer Bar Animation */
+     @keyframes micPulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 143, 167, 0.5); }
+      70% { box-shadow: 0 0 0 18px rgba(255, 143, 167, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 143, 167, 0); }
+      }
+      .mic-pulse {
+        animation: micPulse 1.6s ease-out infinite;
+        }
+
+    /* Visualizer Equalizer Bar Animation */
+    @keyframes eqBar {
+      0%, 100% { height: 15%; }
+      50% { height: 95%; }
+    }
+    .eq-bar {
+      animation: eqBar 1.2s ease-in-out infinite alternate;
+    }
+
+    /* Toast Notification Animation */
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .toast-animate {
+      animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .page-section {
+      display: none;
+    }
+    .page-section.active-page {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      background-color: #0d0c1d !important;
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(200, 180, 255, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(255, 143, 167, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(182, 242, 217, 0.20) 0%, transparent 60%) !important;
+      background-attachment: fixed !important;
+    }
+  </style>
+</head>
+<body class="bg-koko-darkBg text-gray-100 font-inter min-h-screen flex flex-col selection:bg-koko-coral selection:text-koko-darkBg">
+
+  <!-- TOP LIVE ANNOUNCEMENT TICKER BANNER -->
+  <div class="bg-koko-charcoal border-b border-white/10 text-xs py-2 overflow-hidden relative z-50">
+    <div class="animate-ticker whitespace-nowrap flex items-center font-montserrat font-bold tracking-wider text-koko-lilac">
+      <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-circle text-koko-coral text-[8px] animate-ping"></i> WATCH KITM: MON, WED, & FRI @ 8:00 AM EST</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-microphone text-koko-mint"></i> KOKO IN THE MORNING - LIVE ON KICK & TWITCH</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-user-secret text-koko-yellow"></i> CONFESSIONAL SUBMISSIONS OPEN</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-gamepad text-koko-blue"></i> COMING SOON: THE NITEKAP LIVE</span>
+      <span class="text-white/30">•</span>
+      <!-- Duplicate for infinite seamless scroll -->
+      <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-circle text-koko-coral text-[8px]"></i> WATCH KITM: MON, WED, & FRI @ 8:00 AM EST</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-microphone text-koko-mint"></i> KOKO IN THE MORNING - LIVE ON KICK & TWITCH</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-user-secret text-koko-yellow"></i> CONFESSIONAL SUBMISSIONS OPEN</span>
+      <span class="text-white/30">•</span>
+      <span class="mx-6"><i class="fa-solid fa-gamepad text-koko-blue"></i> COMING SOON: THE NITEKAP LIVE</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-koko-darkBg/90 backdrop-blur-md border-b border-white/10 px-4 lg:px-8 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+      <!-- Logo Branding -->
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-2 group">
+        <div class="relative">
+        
+          <i class="fa-sharp-duotone fa-solid fa-podcast text-koko-pink text-3xl group-hover:rotate-12 transition-transform duration-300"></i>
+        </div>
+        <div class="flex flex-col">
+          <img src="https://raw.githubusercontent.com/orenishii82/heykoko/ee1dc487a4aa755e0fc299999b6aa1bc12e05cd2/KokoWinters_wordmark.png" alt="Koko Winters" class="h-10 md:h-12 w-auto">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-semibold text-sm">
+        <button onclick="navigateTo('watch')" id="nav-watch" class="nav-btn text-gray-300 hover:text-koko-pink transition">Watch</button>
+        <button onclick="navigateTo('shows')" id="nav-shows" class="nav-btn text-gray-300 hover:text-koko-lavender transition">Schedule</button>
+        <button onclick="navigateTo('confessional')" id="nav-confessional" class="nav-btn text-gray-300 hover:text-koko-yellow transition">Need Advice?</button>
+        <button onclick="navigateTo('topics')" id="nav-topics" class="nav-btn text-gray-300 hover:text-koko-blue transition">Trending</button>
+        <button onclick="navigateTo('community')" id="nav-community" class="nav-btn text-gray-300 hover:text-koko-mint transition">The Krew</button>
+        <!-- Support the Show dropdown -->
+        <div class="relative group">
+          <button class="nav-btn text-gray-300 hover:text-koko-pink transition flex items-center gap-1">
+            Support the Show <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </button>
+            <div class="absolute right-0 top-full pt-3 hidden group-hover:block z-50">
+              <div class="bg-koko-cardBg border border-white/10 rounded-2xl p-2 min-w-[180px] shadow-2xl flex flex-col">
+              <a href="https://ko-fi.com/kokowinters" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg text-gray-200 hover:bg-white/5 hover:text-koko-coral transition">Ko-fi</a>
+              <a href="https://venmo.com/u/kokowinters" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg text-gray-200 hover:bg-white/5 hover:text-koko-coral transition">Venmo</a>
+              <a href="https://cash.app/$MVNclient" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg text-gray-200 hover:bg-white/5 hover:text-koko-coral transition">Cash App</a>
+              </div>
+              </div>
+              </div>
+      </nav>
+
+      <!-- Watch Live CTA & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <button onclick="navigateTo('watch')" class="relative group overflow-hidden rounded-full p-[2px] focus:outline-none">
+          <span class="absolute inset-0 bg-gradient-to-r from-koko-coral via-koko-lavender to-koko-blue rounded-full animate-pulse"></span>
+          <span class="relative px-4 py-2 bg-koko-darkBg rounded-full flex items-center gap-2 font-montserrat font-extrabold text-xs text-koko-cream group-hover:bg-transparent group-hover:text-koko-darkBg transition duration-300">
+            <span class="w-2.5 h-2.5 rounded-full bg-koko-coral animate-ping"></span>
+            <i class="fa-solid fa-broadcast-tower"></i> WATCH LIVE
+          </span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white p-2 text-xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 mt-3 pt-3 pb-2 flex flex-col gap-3 font-semibold text-sm">
+      <button onclick="navigateTo('home'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg bg-white/5 text-koko-coral">Home</button>
+      <button onclick="navigateTo('shows'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg hover:bg-white/5 text-gray-200">The Shows</button>
+      <button onclick="navigateTo('confessional'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg hover:bg-white/5 text-gray-200">Need Advice?</button>
+      <button onclick="navigateTo('topics'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg hover:bg-white/5 text-gray-200">Trending Topics</button>
+      <button onclick="navigateTo('community'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg hover:bg-white/5 text-gray-200">The Krew</button>
+      <button onclick="navigateTo('watch'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg bg-koko-coral text-koko-darkBg font-bold">Watch Live</button>
+    <!-- Support the Show (mobile) -->
+    <div class="flex flex-col gap-1">
+      <span class="px-3 py-2 text-xs uppercase tracking-wider text-koko-yellow font-montserrat font-extrabold">Support the Show</span>
+      <a href="https://ko-fi.com/kokowinters" target="_blank" rel="noopener" class="px-3 py-2 pl-6 rounded-lg hover:bg-white/5 text-gray-200">Ko-fi</a>
+      <a href="https://venmo.com/kokowinters" target="_blank" rel="noopener" class="px-3 py-2 pl-6 rounded-lg hover:bg-white/5 text-gray-200">Venmo</a>
+      <a href="https://cash.app/$MVNclient" target="_blank" rel="noopener" class="px-3 py-2 pl-6 rounded-lg hover:bg-white/5 text-gray-200">Cash App</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 lg:px-8 py-6">
+
+    <!-- ================================================================= -->
+    <!-- 1. HOME PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-home" class="page-section active-page space-y-12">
+
+      <!-- HERO SECTION -->
+      <section class="hero-gradient rounded-3xl border border-white/15 p-6 md:p-10 lg:p-12 relative overflow-hidden shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          <div class="lg:col-span-7 space-y-5 z-10">
+            <!-- Broadcast Time Badge -->
+            <div class="inline-flex items-center gap-2 bg-koko-darkBg/60 backdrop-blur-md border border-koko-coral/30 text-koko-cream px-3.5 py-1.5 rounded-full text-xs font-montserrat font-bold">
+              <span class="w-2 h-2 rounded-full bg-koko-coral animate-ping"></span>
+              <span class="text-koko-coral">LIVE</span> MON, WED, FRI &nbsp;|&nbsp; 8AM - 10AM EST
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-montserrat text-5xl sm:text-7xl lg:text-8xl text-koko-cream leading-none drop-shadow-md peach-ombre">
+              KOKO <br>IN THE MORNING 
+            </h1>
+
+            <p class="font-montserrat font-bold text-lg md:text-xl text-koko-lilac">
+              Real conversations. Real people. No filter.
+            </p>
+
+            <p class="text-gray-300 text-sm md:text-base max-w-xl leading-relaxed">
+              Your morning fix of trending topics, culture, confessions, and good energy. Tell your kin; tell some friends!
+            </p>
+
+            <!-- Actions -->
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <button onclick="navigateTo('watch')" class="glow-coral bg-koko-coral hover:bg-opacity-90 text-koko-darkBg font-montserrat font-black px-7 py-3.5 rounded-2xl flex items-center gap-3 transition transform active:scale-95 shadow-lg text-sm md:text-base">
+                <i class="fa-solid fa-play"></i> WATCH LIVE <i></i>
+              </button>
+
+              <button onclick="navigateTo('shows')" class="bg-koko-darkBg/60 hover:bg-koko-darkBg text-koko-cream border border-white/20 font-montserrat font-bold px-6 py-3.5 rounded-2xl flex items-center gap-2 transition text-sm md:text-base">
+                EXPLORE SHOWS
+              </button>
+            </div>
+          </div>
+
+          <!-- Join Koko Card (replaces the visualizer) -->
+          <div class="lg:col-span-5 z-10 flex justify-center">
+            <div class="relative w-full max-w-xs h-[24rem] rounded-2xl glass-card border border-koko-lavender/30 p-6 flex flex-col items-center justify-center text-center overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-br from-koko-coral/20 via-transparent to-koko-lavender/20 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative w-24 h-24 rounded-full bg-koko-darkBg/80 border-2 border-koko-coral flex items-center justify-center mb-4 text-koko-pink text-4xl shadow-lg shadow-koko-coral/30 mic-pulse">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <span class="relative text-lg text-koko-lavender font-medium uppercase tracking-widest mt-1">The Internet's Best Kept Secret in the AM</span>
+              <div class="relative mt-4 pt-4 border-t border-koko-lavender/20 w-full flex justify-around text-koko-cream/70 text-xs font-semibold">
+                <span><i class="fa-solid fa-headset text-koko-pink mr-1"></i>Tune in LIVE or On Demand</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 2. KOKO'S CONFESSIONAL BANNER -->
+      <section class="confessional-gradient rounded-3xl p-6 sm:p-8 md:p-10 text-koko-darkBg relative overflow-hidden shadow-xl transform transition hover:scale-[1.005]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+          <div class="lg:col-span-8 space-y-3">
+            <div class="inline-block bg-koko-darkBg text-koko-yellow text-xs font-montserrat font-black tracking-widest px-3 py-1 rounded-md uppercase">
+              Unfiltered Advice
+            </div>
+
+            <h2 class="font-bebas text-4xl sm:text-6xl tracking-wide leading-none text-koko-darkBg">
+              KOKO'S CONFESSIONAL
+            </h2>
+
+            <p class="font-montserrat font-extrabold text-base sm:text-lg text-koko-darkBg/90">
+              Your secrets. A fresh perspective.
+            </p>
+
+            <p class="text-sm sm:text-base font-medium text-koko-darkBg/80 max-w-xl">
+              Stuck in a wild relationship loop? Got a sticky work dilemma? Drop your story anonymously. Koko reads and reviews chosen confessions live on air.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center space-y-4">
+            <button onclick="navigateTo('confessional')" class="w-full lg:w-auto bg-koko-darkBg hover:bg-koko-charcoal text-koko-cream font-montserrat font-extrabold px-6 py-3.5 rounded-2xl flex items-center justify-center gap-3 transition shadow-lg group">
+              <i class="fa-solid fa-envelope-open-text text-koko-pink group-hover:rotate-12 transition"></i>
+              SEND YOUR CONFESSION
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. THE KOKO UNIVERSE (SPINOFF SHOWS GRID) -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+          <div>
+            <h2 class="font-bebas text-3xl sm:text-4xl text-koko-cream tracking-wide">FIND KOKO LIVE</h2>
+          </div>
+          <span class="text-xs font-montserrat text-gray-400 font-bold uppercase tracking-wider hidden sm:block">See More Shows</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- SPINOFF 1: HAUTE KOKO -->
+          <div class="haute-gradient border border-koko-coral/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between glow-hover glow-coral relative overflow-hidden group">
+            <div class="absolute top-4 right-4 bg-koko-coral/20 text-koko-coral border border-koko-coral/30 text-[10px] font-montserrat font-black uppercase tracking-widest px-3 py-1 rounded-full">
+              TRENDING
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 text-koko-coral">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="2" x2="6" y2="4"/>
+                    <line x1="10" y1="2" x2="10" y2="4"/>
+                    <line x1="14" y1="2" x2="14" y2="4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bebas text-4xl sm:text-5xl text-koko-coral leading-none tracking-wider">
+                    HAUTE <span class="font-handwriting text-2xl text-koko-lavender font-normal lowercase">(Tea with)</span> KOKO
+                  </h3>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-300 leading-relaxed pt-2">
+                On point culture commentary, hot takes, internet drama breakdowns, and deep-dive reactions with special guest commentary.
+              </p>
+            </div>
+
+            <div class="pt-6">
+              <button onclick="navigateTo('shows')" class="bg-koko-darkBg/80 hover:bg-koko-darkBg text-koko-coral border border-koko-coral/30 font-montserrat font-extrabold text-xs px-5 py-3 rounded-xl flex items-center gap-2 transition">
+                WATCH / LISTEN <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- SPINOFF 2: THE NITEKAP -->
+          <div class="nitekap-gradient border border-koko-blue/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between glow-hover glow-blue relative overflow-hidden group">
+            <div class="absolute top-4 right-4 bg-koko-blue/20 text-koko-blue border border-koko-blue/30 text-[10px] font-montserrat font-black uppercase tracking-widest px-3 py-1 rounded-full">
+              AFTER HOURS
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 text-koko-blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="6" width="20" height="12" rx="6"/>
+                    <path d="M6 12h4m-2-2v4"/>
+                    <circle cx="15" cy="10" r="1" fill="currentColor"/>
+                    <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bebas text-4xl sm:text-5xl text-koko-blue leading-none tracking-wider">
+                    THE NITEKAP
+                  </h3>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-300 leading-relaxed pt-2">
+                Join Koko for blunt conversations, fun games, and unforgettable RPG series.
+              </p>
+            </div>
+
+            <div class="pt-6">
+              <button onclick="navigateTo('shows')" class="bg-koko-darkBg/80 hover:bg-koko-darkBg text-koko-blue border border-koko-blue/30 font-montserrat font-extrabold text-xs px-5 py-3 rounded-xl flex items-center gap-2 transition">
+                WATCH / JOIN <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. LATEST TOPICS -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+          <div>
+            <h2 class="font-bebas text-3xl sm:text-4xl text-koko-cream tracking-wide">LATEST TOPICS</h2>
+          </div>
+          <button onclick="navigateTo('topics')" class="text-xs font-montserrat text-koko-blue hover:underline font-bold flex items-center gap-1">
+            VIEW ALL <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- TOPIC CARD: Adulting -->
+          <div onclick="openTopicCategory('Adulting')" class="bg-gradient-to-br from-koko-lavender/20 to-koko-cardBg border border-koko-lavender/30 rounded-2xl p-5 cursor-pointer glow-hover flex flex-col justify-between group h-36">
+            <div class="space-y-1">
+              <span class="text-[10px] font-montserrat font-extrabold text-koko-lavender uppercase tracking-widest">Being Grown</span>
+              <h4 class="font-montserrat font-extrabold text-xl text-koko-cream group-hover:text-koko-lavender transition">Adulting</h4>
+              <p class="text-xs text-gray-400 line-clamp-1">Careers, moving out, and doing this thing called life.</p>
+            </div>
+            <div class="flex justify-end">
+              <span class="w-8 h-8 rounded-full bg-koko-lavender/20 text-koko-lavender flex items-center justify-center text-xs group-hover:bg-koko-lavender group-hover:text-koko-darkBg transition">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- TOPIC CARD: Dating -->
+          <div onclick="openTopicCategory('Dating')" class="bg-gradient-to-br from-koko-pink/20 to-koko-cardBg border border-koko-pink/30 rounded-2xl p-5 cursor-pointer glow-hover flex flex-col justify-between group h-36">
+            <div class="space-y-1">
+              <span class="text-[10px] font-montserrat font-extrabold text-koko-pink uppercase tracking-widest">Finding Love</span>
+              <h4 class="font-montserrat font-extrabold text-xl text-koko-cream group-hover:text-koko-pink transition">Dating</h4>
+              <p class="text-xs text-gray-400 line-clamp-1">Red flags, situationships, & standards.</p>
+            </div>
+            <div class="flex justify-end">
+              <span class="w-8 h-8 rounded-full bg-koko-pink/20 text-koko-pink flex items-center justify-center text-xs group-hover:bg-koko-pink group-hover:text-koko-darkBg transition">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- TOPIC CARD: Money -->
+          <div onclick="openTopicCategory('Money')" class="bg-gradient-to-br from-koko-mint/20 to-koko-cardBg border border-koko-mint/30 rounded-2xl p-5 cursor-pointer glow-hover flex flex-col justify-between group h-36">
+            <div class="space-y-1">
+              <span class="text-[10px] font-montserrat font-extrabold text-koko-mint uppercase tracking-widest">Securing the Bag</span>
+              <h4 class="font-montserrat font-extrabold text-xl text-koko-cream group-hover:text-koko-mint transition">Money</h4>
+              <p class="text-xs text-gray-400 line-clamp-1">Budgeting, side hustles, & financial resets.</p>
+            </div>
+            <div class="flex justify-end">
+              <span class="w-8 h-8 rounded-full bg-koko-mint/20 text-koko-mint flex items-center justify-center text-xs group-hover:bg-koko-mint group-hover:text-koko-darkBg transition">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- TOPIC CARD: Life After Heartbreak -->
+          <div onclick="openTopicCategory('Life After Heartbreak')" class="bg-gradient-to-br from-koko-blue/20 to-koko-cardBg border border-koko-blue/30 rounded-2xl p-5 cursor-pointer glow-hover flex flex-col justify-between group h-36">
+            <div class="space-y-1">
+              <span class="text-[10px] font-montserrat font-extrabold text-koko-blue uppercase tracking-widest">Moving On</span>
+              <h4 class="font-montserrat font-extrabold text-xl text-koko-cream group-hover:text-koko-blue transition">Life After Heartbreak</h4>
+              <p class="text-xs text-gray-400 line-clamp-1">Healing, self-worth, & moving forward.</p>
+            </div>
+            <div class="flex justify-end">
+              <span class="w-8 h-8 rounded-full bg-koko-blue/20 text-koko-blue flex items-center justify-center text-xs group-hover:bg-koko-blue group-hover:text-koko-darkBg transition">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. COMMUNITY & DISCORD JOIN CTA -->
+      <section class="community-gradient rounded-3xl p-8 sm:p-10 text-koko-darkBg shadow-xl relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          <div class="lg:col-span-7 space-y-3">
+            <h2 class="font-bebas text-4xl sm:text-6xl tracking-wide leading-none text-koko-darkBg">
+              JOIN THE KREW
+            </h2>
+            <p class="font-montserrat font-bold text-sm sm:text-base text-koko-darkBg/90">
+              Get show updates, exclusive post-show chats, and direct access to special events.
+            </p>
+            
+            <form onsubmit="handleNewsletterSubmit(event)" class="pt-4 flex flex-col sm:flex-row gap-3 max-w-md">            
+              <input type="email" name="email" placeholder="Enter your email address" required class="px-4 py-3 rounded-xl bg-white/90 text-koko-darkBg font-medium text-sm focus:outline-none focus:ring-2 focus:ring-koko-darkBg flex-grow placeholder-gray-500 shadow-inner">
+            <button type="submit" class="bg-koko-darkBg hover:bg-koko-charcoal text-koko-cream font-montserrat font-black px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition shadow-md">
+              SIGN UP <i class="fa-solid fa-paper-plane text-koko-mint ml-1"></i>
+              </button>
+              </form>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center space-y-4">
+            <div class="font-handwriting text-3xl sm:text-4xl text-koko-darkBg font-bold rotate-[2deg] bg-white/40 px-5 py-2 rounded-xl backdrop-blur-sm shadow-sm text-center">
+              Be Part of a Community You'll Love.
+            </div>
+            <a href="https://discord.gg/NE5a2RbYaf" target="_blank" class="w-full sm:w-auto bg-[#5865F2] hover:bg-opacity-90 text-white font-montserrat font-extrabold px-6 py-3.5 rounded-xl flex items-center justify-center gap-3 transition shadow-lg text-sm">
+              <i class="fa-brands fa-discord text-xl"></i> JOIN THE DISCORD
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. PODCAST ON-DEMAND SECTION -->
+      <section class="bg-koko-cardBg border border-white/10 rounded-3xl p-6 sm:p-10 text-center space-y-6">
+        <div class="max-w-2xl mx-auto space-y-2">
+          <h2 class="font-bebas text-3xl sm:text-5xl text-koko-cream tracking-wide">
+            CAN'T CATCH THE SHOW LIVE?
+          </h2>
+          <div class="font-handwriting text-3xl sm:text-4xl text-koko-cream text-center">
+          LISTEN ON DEMAND
+          </div>
+          <p class="text-sm text-gray-300">
+            Full episodes and special segments are uploaded across all major audio platforms.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2">
+          <a href="#" class="bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-xs font-montserrat font-bold text-gray-200 transition">
+            <i class="fa-solid fa-podcast text-koko-lavender text-base"></i> Apple Podcasts
+          </a>
+          <a href="#" class="bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-xs font-montserrat font-bold text-gray-200 transition">
+            <i class="fa-brands fa-spotify text-koko-mint text-base"></i> Spotify
+          </a>
+          <a href="#" class="bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-xs font-montserrat font-bold text-gray-200 transition">
+            <i class="fa-solid fa-radio text-koko-coral text-base"></i> iHeartRadio
+          </a>
+          <a href="#" class="bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-xs font-montserrat font-bold text-gray-200 transition">
+            <i class="fa-brands fa-amazon text-koko-yellow text-base"></i> Amazon Music
+          </a>
+        </div>
+
+        <!-- Mini Interactive Audio Preview Player -->
+        <div class="max-w-xl mx-auto bg-koko-darkBg border border-white/10 rounded-2xl p-4 flex items-center gap-4 text-left shadow-inner">
+          <button id="mini-player-toggle" onclick="toggleAudioPreview()" class="w-12 h-12 rounded-full bg-koko-coral text-koko-darkBg flex items-center justify-center text-lg flex-shrink-0 hover:scale-105 transition">
+            <i id="mini-player-icon" class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-grow min-w-0">
+            <div class="text-xs text-koko-coral font-montserrat font-bold uppercase tracking-wider">Featured Episode</div>
+            <div class="text-sm font-bold text-white truncate">Why We Struggle With Boundaries in Dating</div>
+            <div class="w-full bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+              <div id="audio-progress" class="bg-koko-coral h-full w-1/3 transition-all"></div>
+            </div>
+          </div>
+
+          <span class="text-xs text-gray-400 font-mono hidden sm:block">42:10</span>
+        </div>
+      </section>
+
+      <!-- 7. MERCH SHOP BANNER -->
+      <section class="bg-gradient-to-r from-koko-cardBg via-koko-charcoal to-koko-cardBg border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-block bg-koko-pink/20 text-koko-pink border border-koko-pink/30 text-[10px] font-montserrat font-black uppercase tracking-widest px-3 py-1 rounded-full">
+            Official Drops
+          </div>
+          <h2 class="font-bebas text-3xl sm:text-4xl text-koko-cream tracking-wide">SHOP KOKO MERCH</h2>
+          <p class="text-xs sm:text-sm text-gray-300">Grab your gear. Rep the Krew. </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center text-koko-lavender hover:scale-105 transition">
+            <i class="fa-solid fa-shirt text-2xl"></i>
+            <span class="text-[9px] font-bold text-gray-300 mt-1">Apparel</span>
+          </div>
+          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center text-koko-pink hover:scale-105 transition">
+            <i class="fa-solid fa-mug-hot text-2xl"></i>
+            <span class="text-[9px] font-bold text-gray-300 mt-1">Accessories</span>
+          </div>
+          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center text-koko-mint hover:scale-105 transition">
+            <i class="fa-solid fa-hat-cowboy text-2xl"></i>
+            <span class="text-[9px] font-bold text-gray-300 mt-1">More</span>
+          </div>
+        </div>
+
+        <button onclick="triggerMerchToast()" class="bg-koko-cream hover:bg-white text-koko-darkBg font-montserrat font-black px-6 py-3.5 rounded-2xl text-xs uppercase tracking-wider transition shadow-lg w-full md:w-auto">
+          VISIT THE SHOP <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </section>
+
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- 2. WATCH LIVE PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-watch" class="page-section space-y-8">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div>
+          <h1 class="font-bebas text-4xl sm:text-5xl text-koko-cream tracking-wide">WATCH KOKO LIVE</h1>
+          <p class="text-xs sm:text-sm text-koko-coral font-bold flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-koko-coral animate-ping"></span> ON AIR
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <div class="lg:col-span-8 space-y-4">
+          <div class="relative w-full aspect-video bg-black rounded-3xl overflow-hidden border border-white/15 shadow-2xl flex items-center justify-center group">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-koko-darkBg via-transparent to-transparent z-10"></div>
+
+            <div class="text-center p-6 space-y-4 z-20">
+              <div class="w-20 h-20 rounded-full bg-koko-coral/20 text-koko-coral mx-auto flex items-center justify-center border border-koko-coral/40 animate-pulse">
+                <i class="fa-solid fa-microphone text-3xl"></i>
+              </div>
+              <h3 class="font-bebas text-3xl text-koko-cream tracking-wider">LIVESTREAM PLAYER</h3>
+              <p class="text-xs text-gray-300 max-w-md mx-auto">
+                Connected to main stream feed. Toggle platform buttons below to watch on your preferred app.
+              </p>
+            </div>
+
+            <div class="absolute top-4 left-4 z-20 flex items-center gap-2">
+              <span class="bg-red-600 text-white font-montserrat font-black text-[10px] px-2.5 py-1 rounded-md uppercase">LIVE</span>
+              <span class="bg-black/60 backdrop-blur-md text-white font-mono text-[10px] px-2.5 py-1 rounded-md"><i class="fa-solid fa-eye text-koko-coral mr-1"></i> TAP IN</span>
+            </div>
+          </div>
+
+          <h3 class="font-bebas text-3xl text-koko-cream tracking-wider">WATCH ON YOUR FAVORITE PLATFORM</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <a href="https://twitch.tv/kokowinters" target="_blank" class="bg-[#9146FF] hover:opacity-90 text-white font-montserrat font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+              <i class="fa-brands fa-twitch text-base"></i> Twitch
+            </a>
+            <a href="https://youtube.com" target="_blank" class="bg-[#FF0000] hover:opacity-90 text-white font-montserrat font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+              <i class="fa-brands fa-youtube text-base"></i> YouTube
+            </a>
+            <a href="https://kick.com/kokowinters" target="_blank" class="bg-[#53FC18] hover:opacity-90 text-black font-montserrat font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+              <i class="fa-solid fa-bolt text-base"></i> Kick
+            </a>
+            <a href="https://tiktok.com/@ko.kowinters/live" target="_blank" class="bg-black hover:bg-gray-900 text-white font-montserrat font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+              <i class="fa-brands fa-tiktok text-base"></i> TikTok
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-koko-cardBg border border-white/10 rounded-3xl p-4 flex flex-col h-[400px] lg:h-auto overflow-hidden">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+            <span class="font-montserrat font-bold text-xs text-koko-cream flex items-center gap-2">
+              <i class="fa-solid fa-comments text-koko-lavender"></i> STREAM CHAT
+            </span>
+            <span class="text-[10px] text-koko-mint font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-koko-mint animate-pulse"></span> LIVE
+            </span>
+          </div>
+
+          <div class="flex-grow w-full h-full min-h-[300px] rounded-2xl overflow-hidden bg-koko-darkBg">
+            <iframe
+              src="https://botrix.live/widgets/chat/?bid=gFrpoT7Vuxof%2BhDWCRcaWQ&theme=transparent&messageSound=0&messageDirection=up&platformIcon=false&bots=false&emojis=true&hideCommands=false&hideMessages=false&hideMessagesSeconds=15&widgetSize=18&streamTogether=true&cheer=true&pointsReward=false&animation=fadeIn&showTimestamp=false&shadowThickness=1&twitch=true&youtube=false&kick=true&trovo=false"
+              class="w-full h-full border-0"
+              allow="autoplay"
+              scrolling="no">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VOD GALLERY -->
+      <div class="space-y-6 pt-8 border-t border-white/10">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="font-bebas text-3xl text-koko-cream tracking-wider uppercase">EPISODES YOU'LL LOVE</h2>
+            <p class="text-koko-cream/70 text-sm">Missed a show? Catch up on KITM classics on-demand.</p>
+          </div>
+          <span class="text-xl text-koko-lavender font-handwriting text-xl">Recent Episodes & Highlights</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- VOD Item 1 -->
+          <div onclick="playVodModal('Dating Rules in 2026', 'KITM Morning Broadcast')" class="glass-card rounded-2xl overflow-hidden border border-koko-coral/20 hover:border-koko-coral cursor-pointer group transition-all">
+            <div class="aspect-video bg-koko-cardBg relative flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-koko-darkBg to-transparent opacity-80"></div>
+              <i class="fa-solid fa-circle-play text-4xl text-koko-coral group-hover:scale-125 transition-transform z-10 shadow-lg"></i>
+              <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-koko-darkBg/90 text-koko-cream text-[10px] font-mono">1:42:10</span>
+            </div>
+            <div class="p-4 space-y-2">
+              <div class="flex items-center justify-between text-[11px] text-koko-lavender font-semibold">
+                <span>Koko in the Morning</span>
+                <span>12.4k views</span>
+              </div>
+              <h3 class="font-bold text-koko-cream text-base group-hover:text-koko-coral transition-colors">Dating Rules in 2026: Setting Boundaries</h3>
+              <p class="text-koko-cream/70 text-xs line-clamp-2">Koko and the Krew debate relationship expectations and viewer questions.</p>
+            </div>
+          </div>
+
+          <!-- VOD Item 2 -->
+          <div onclick="playVodModal('Haute Koko Trending Weekly', 'Haute Koko Stream')" class="glass-card rounded-2xl overflow-hidden border border-koko-pink/20 hover:border-koko-pink cursor-pointer group transition-all">
+            <div class="aspect-video bg-koko-cardBg relative flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-koko-darkBg to-transparent opacity-80"></div>
+              <i class="fa-solid fa-circle-play text-4xl text-koko-pink group-hover:scale-125 transition-transform z-10 shadow-lg"></i>
+              <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-koko-darkBg/90 text-koko-cream text-[10px] font-mono">58:30</span>
+            </div>
+            <div class="p-4 space-y-2">
+              <div class="flex items-center justify-between text-[11px] text-koko-lavender font-semibold">
+                <span>The Rundown</span>
+                <span>18.9k views</span>
+              </div>
+              <h3 class="font-bold text-koko-cream text-base group-hover:text-koko-pink transition-colors">Haute Koko: Pop Culture Breakdown</h3>
+              <p class="text-koko-cream/70 text-xs line-clamp-2">Spilling tea on trending pop culture topics, viral news, and audience commentary.</p>
+            </div>
+          </div>
+
+          <!-- VOD Item 3 -->
+          <div onclick="playVodModal('Navigating Career Pivots', 'KITM Morning Broadcast')" class="glass-card rounded-2xl overflow-hidden border border-koko-mint/20 hover:border-koko-mint cursor-pointer group transition-all">
+            <div class="aspect-video bg-koko-cardBg relative flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-koko-darkBg to-transparent opacity-80"></div>
+              <i class="fa-solid fa-circle-play text-4xl text-koko-mint group-hover:scale-125 transition-transform z-10 shadow-lg"></i>
+              <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-koko-darkBg/90 text-koko-cream text-[10px] font-mono">1:15:45</span>
+            </div>
+            <div class="p-4 space-y-2">
+              <div class="flex items-center justify-between text-[11px] text-koko-lavender font-semibold">
+                <span>Classic Koko</span>
+                <span>9.8k views</span>
+              </div>
+              <h3 class="font-bold text-koko-cream text-base group-hover:text-koko-mint transition-colors">Adulting & Career Moves</h3>
+              <p class="text-koko-cream/70 text-xs line-clamp-2">How to handle career burnout and pivot in your late twenties without panicking.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- 3. TOPICS PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-topics" class="page-section space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div>
+          <h1 class="font-bebas text-4xl sm:text-5xl text-koko-cream tracking-wide">LATEST TOPICS</h1>
+          <p class="text-xs sm:text-sm text-koko-lavender font-medium">Browse deep dives, show notes, confessions, and more.</p>
+        </div>
+
+        <div class="relative w-full sm:w-64">
+          <input type="text" id="topic-search-input" onkeyup="filterTopicsBySearch()" placeholder="Search topics..." class="w-full bg-koko-cardBg border border-white/10 rounded-xl px-4 py-2 pl-9 text-xs text-white focus:outline-none focus:border-koko-blue">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-gray-400"></i>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 border-b border-white/10 pb-3">
+        <button onclick="filterTopicList('Adulting')" class="topic-tab-btn px-4 py-2 rounded-xl text-xs font-montserrat font-bold bg-koko-cardBg border border-white/10 text-gray-300 hover:text-white transition">Adulting</button>
+        <button onclick="filterTopicList('Dating')" class="topic-tab-btn px-4 py-2 rounded-xl text-xs font-montserrat font-bold bg-koko-cardBg border border-white/10 text-gray-300 hover:text-white transition">Dating</button>
+        <button onclick="filterTopicList('Money')" class="topic-tab-btn px-4 py-2 rounded-xl text-xs font-montserrat font-bold bg-koko-cardBg border border-white/10 text-gray-300 hover:text-white transition">Money</button>
+        <button onclick="filterTopicList('Life After Heartbreak')" class="topic-tab-btn px-4 py-2 rounded-xl text-xs font-montserrat font-bold bg-koko-cardBg border border-white/10 text-gray-300 hover:text-white transition">Life After Heartbreak</button>
+        <button onclick="filterTopicList('All')" class="topic-tab-btn px-4 py-2 rounded-xl text-xs font-montserrat font-bold bg-koko-blue text-koko-darkBg transition">All</button>
+      </div>
+
+      <div id="topics-posts-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Posts populated by JS from the Substack feed -->
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- 4. CONFESSIONAL PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-confessional" class="page-section space-y-8">
+      <div class="max-w-3xl mx-auto space-y-6">
+
+        <div class="text-center space-y-3">
+          <span class="bg-koko-yellow/20 text-koko-yellow border border-koko-yellow/30 text-[10px] font-montserrat font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full">
+            100% Anonymous & Encrypted
+          </span>
+          <h1 class="font-bebas text-5xl sm:text-6xl text-koko-cream tracking-wide">SUBMIT A CONFESSION</h1>
+          <p class="text-sm text-gray-300 max-w-lg mx-auto">
+            Got something you can't tell your friends? Need unedited advice from Koko and the community? Send it below.
+          </p>
+        </div>
+
+        <div class="bg-koko-cardBg border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6 relative">
+          <form onsubmit="handleConfessionalSubmit(event)" class="space-y-5">
+            <div>
+              <label class="block text-xs font-montserrat font-extrabold text-koko-lavender uppercase mb-2">Category</label>
+              <select id="confession-category" required class="w-full bg-koko-darkBg border border-white/10 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-koko-lavender">
+                <option value="Adulting & Work">Adulting & Work</option>
+                <option value="Dating Dilemma">Dating Dilemma</option>
+                <option value="Family / Friend Drama">Family / Friend Drama</option>
+                <option value="Spicy Storytime">Spicy Storytime</option>
+                <option value="Getting It Off My Chest">Getting It Off My Chest</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-montserrat font-extrabold text-koko-lavender uppercase mb-2">Your Secret / Story</label>
+              <textarea id="confession-text" rows="5" placeholder="Type your confession here...Don't include your name or identifying information." required class="w-full bg-koko-darkBg border border-white/10 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-koko-lavender"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-montserrat font-extrabold text-koko-lavender uppercase mb-2">Alias (Optional)</label>
+              <input type="text" id="confession-alias" placeholder="e.g. Sleepless in Seattle" class="w-full bg-koko-darkBg border border-white/10 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-koko-lavender">
+            </div>
+
+            <div class="space-y-3 text-sm text-gray-300 py-4">
+              <p><strong class="text-koko-lavender">I understand that the information included in this confession may be shared publicly on a live platform.</strong></p>
+              <p>I give permission for my story to be shared and have removed identifying details. I acknowledge that my words may be edited to fit the show's editorial and time constraints.</p>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="disclaimer" value="yes" required class="accent-koko-coral">
+                  Yes, I understand.
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="disclaimer" value="no" class="accent-koko-coral">
+                    No, I do not understand.
+                    </label>
+                    </div>
+                    </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-koko-coral to-koko-pink hover:opacity-95 text-koko-darkBg font-montserrat font-black py-4 rounded-xl text-sm uppercase tracking-wider transition shadow-lg">
+              SUBMIT ANONYMOUSLY <i class="fa-solid fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="space-y-4 pt-4">
+          <h3 class="font-bebas text-2xl text-koko-cream tracking-wide">RECENT CONFESSIONS</h3>
+
+          <div class="space-y-3" id="recent-confessions-list">
+            <div class="bg-koko-darkBg/60 border border-white/10 rounded-2xl p-4 text-xs space-y-2">
+              <div class="flex items-center justify-between text-koko-yellow font-bold">
+                <span>Category: Dating Dilemma</span>
+                <span class="text-[10px] text-gray-400">By "AintThisSomeShyt?"</span>
+              </div>
+              <p class="text-gray-300">"I accidentally found out my fiancé is still paying his ex's phone bill every month. Should I bring it up before the wedding?"</p>
+            </div>
+
+            <div class="bg-koko-darkBg/60 border border-white/10 rounded-2xl p-4 text-xs space-y-2">
+              <div class="flex items-center justify-between text-koko-mint font-bold">
+                <span>Category: Work & Adulting Secrets</span>
+                <span class="text-[10px] text-gray-400">By "QuietQuitter"</span>
+              </div>
+              <p class="text-gray-300">"I automated 80% of my corporate job with AI six months ago and haven't told anyone. I work 1 hour a day."</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- 5. SHOWS PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-shows" class="page-section space-y-8">
+      <div class="border-b border-white/10 pb-4">
+        <h1 class="font-bebas text-4xl sm:text-5xl text-koko-cream tracking-wide">SHOW SCHEDULE</h1>
+        <p class="text-xs sm:text-sm text-koko-lavender font-medium">Want to know when Koko's going live next? Check here!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-koko-cardBg border border-koko-coral/30 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-montserrat font-black text-koko-coral uppercase tracking-widest">Your Morning Wakeup Call</span>
+            <h3 class="font-bebas text-3xl text-koko-cream">KOKO IN THE MORNING</h3>
+            <p class="text-xs text-gray-300 leading-relaxed">Morning show featuring live phone calls, hot takes, culture updates, and Koko's unfiltered advice.</p>
+            <div class="text-xs text-koko-lavender font-bold">Mon, Wed, Fri @ 8 AM EST</div>
+          </div>
+          <button onclick="navigateTo('watch')" class="w-full bg-koko-coral text-koko-darkBg font-bold py-2.5 rounded-xl text-xs">WATCH NOW</button>
+        </div>
+
+        <div class="bg-koko-cardBg border border-koko-pink/30 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-montserrat font-black text-koko-pink uppercase tracking-widest">Trending</span>
+            <h3 class="font-bebas text-3xl text-koko-pink">HAUTE (Tea with) KOKO</h3>
+            <p class="text-xs text-gray-300 leading-relaxed">Trending internet drama deep-dives, Black pop culture, and guest commentary.</p>
+            <div class="text-xs text-koko-lavender font-bold">Thursdays</div>
+          </div>
+          <button onclick="navigateTo('watch')" class="w-full bg-koko-pink text-koko-darkBg font-bold py-2.5 rounded-xl text-xs">WATCH / LISTEN</button>
+        </div>
+
+        <div class="bg-koko-cardBg border border-koko-blue/30 rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-montserrat font-black text-koko-blue uppercase tracking-widest">After Hours</span>
+            <h3 class="font-bebas text-3xl text-koko-blue">THE NITEKAP</h3>
+            <p class="text-xs text-gray-300 leading-relaxed">Story-driven gaming, RPG walkthroughs, late-night convos, and Krew gaming sessions.</p>
+            <div class="text-xs text-koko-lavender font-bold">Coming Soon</div>
+          </div>
+          <button onclick="navigateTo('watch')" class="w-full bg-koko-blue text-koko-darkBg font-bold py-2.5 rounded-xl text-xs">STAY TUNED</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- 6. COMMUNITY PAGE -->
+    <!-- ================================================================= -->
+    <div id="page-community" class="page-section space-y-8">
+      <div class="border-b border-white/10 pb-4">
+        <h1 class="font-bebas text-4xl sm:text-5xl text-koko-cream tracking-wide">THE KREW</h1>
+        <p class="text-xs sm:text-sm text-koko-mint font-medium">Connect with the Krew from all over.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-koko-cardBg border border-[#5865F2]/40 rounded-3xl p-8 space-y-4">
+          <i class="fa-brands fa-discord text-4xl text-[#5865F2]"></i>
+          <h3 class="font-bebas text-3xl text-white">THE KREWNIVERSE DISCORD</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">Our official community on Discord. Join is for the Afterparty, Krew-only chats, watch parties, and more.</p>
+          <a href="https://discord.gg/NE5a2RbYaf" target="_blank" class="inline-block bg-[#5865F2] text-white font-bold px-6 py-3 rounded-xl text-xs">JOIN DISCORD SERVER</a>
+        </div>
+
+        <div class="bg-koko-cardBg border border-koko-mint/40 rounded-3xl p-8 space-y-4">
+          <i class="fa-solid fa-envelope text-4xl text-koko-mint"></i>
+          <h3 class="font-bebas text-3xl text-white">THE KREWSLETTER</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">Receive Krew updates, recaps, upcoming episode announcements, and exclusive merch drops directly to your inbox.</p>
+
+          <form onsubmit="handleNewsletterSubmit(event)" class="flex gap-2">
+          <input type="email" name="email" placeholder="Your email address" required class="flex-grow bg-koko-darkBg border border-white/10 rounded-xl px-3 py-2 text-xs text-white">
+          <button type="submit" class="bg-koko-mint text-koko-darkBg font-bold px-4 py-2 rounded-xl text-xs">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="bg-koko-darkBg border-t border-white/10 mt-16 py-10 px-4 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+      <div class="md:col-span-4 space-y-2">
+        <div>
+          <img src="https://raw.githubusercontent.com/orenishii82/heykoko/ee1dc487a4aa755e0fc299999b6aa1bc12e05cd2/Koko%20Winters%20Brush%20Logo.png" alt="Koko Winters" class="h-30 md:h-32 w-auto">
+        </div>
+        <p class="text-xs text-gray-400">Real conversations. Real people. No filter.</p>
+      </div>
+
+      <div class="md:col-span-5 flex flex-wrap gap-4 text-xs font-semibold text-gray-300">
+        <button onclick="navigateTo('home')" class="hover:text-koko-coral">Home</button>
+        <button onclick="navigateTo('shows')" class="hover:text-koko-lavender">Shows</button>
+        <button onclick="navigateTo('confessional')" class="hover:text-koko-yellow">Confessional</button>
+        <button onclick="navigateTo('topics')" class="hover:text-koko-blue">Topics</button>
+        <button onclick="navigateTo('community')" class="hover:text-koko-mint">Community</button>
+        <button onclick="navigateTo('watch')" class="hover:text-koko-pink">Watch Live</button>
+      </div>
+
+      <div class="md:col-span-3 flex justify-start md:justify-end gap-4 text-gray-400 text-lg">
+        <a href="https://tiktok.com/@ko.kowinters" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://instagram.com/koko.winters" target="_blank" class="hover:text-koko-pink transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" class="hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://twitch.tv/kokowinters" target="_blank" class="hover:text-[#9146FF] transition"><i class="fa-brands fa-twitch"></i></a>
+        <a href="https://kick.com/kokowinters" target="_blank" class="hover:text-[#53FC18] transition"><i class="fa-solid fa-bolt"></i></a>
+        <a href="https://discord.gg/NE5a2RbYaf" target="_blank" class="hover:text-[#5865F2] transition"><i class="fa-brands fa-discord"></i></a>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-white/5 mt-8 pt-6 flex flex-col sm:flex-row justify-between text-[11px] text-gray-500">
+      <div>© 2026 Koko Winters. All rights reserved.</div>
+      <div class="mt-2 sm:mt-0">Made with love by BKKCreativ.</div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- JAVASCRIPT APP LOGIC -->
+  <script>
+  // ---------- Settings ----------
+  const SUBSTACK_FEED = 'https://lovekoko.substack.com/feed';
+  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSd_LQj3jIW7MGDwz3d9R_GC5t5vIiL72tnKQzaSi31nKhtRDQ/formResponse';
+  const ENTRY = {
+    category: 'entry.318353656', // Category question
+    story: 'entry.1392991563',    // Story question
+    alias: 'entry.2081177731',    // Alias question
+    disclaimer: 'entry.2095551178'// Disclaimer question
+  };
+
+  // ---------- State ----------
+  let activeTopic = 'All';
+let feedError = '';
+let postsData = [
+  { title: "Red Flags We Ignore in Modern Dating", topic: "Dating", date: "Oct 14, 2026", excerpt: "Analyzing why situationships hold people back and how to spot emotional unavailability early.", link: "#" },
+  { title: "The Yes that Ruins Everything: Stop Setting Yourself on Fire to Keep Others Warm", topic: "Adulting", date: "", excerpt: "The price of temporary peace is often the slow, painful death of our true selves.", link: "https://lovekoko.substack.com/p/the-yes-that-ruins-everything-stop" },
+  { title: "Corporate Politics & Setting Work Boundaries", topic: "Adulting", date: "Oct 10, 2026", excerpt: "How to say no to extra tasks without feeling guilty and protecting your mental peace at work.", link: "#" },
+  { title: "Reclaiming Your Identity After a Long Breakup", topic: "Life After Heartbreak", date: "Oct 08, 2026", excerpt: "Rediscovering hobbies, rebuilding self-trust, and learning how to enjoy your own company.", link: "#" },
+  { title: "Crown Royal on Ice: Being Called “Too Much” is Actually a Compliment", topic: "Dating", date: "", excerpt: "If someone calls you “too much,” it’s not a critique of your personality; it is a statement of their capacity.", link: "https://lovekoko.substack.com/p/crown-royal-on-ice-why-being-called" },
+  { title: "Negotiating Your First Raise Like a Pro", topic: "Money", date: "Oct 01, 2026", excerpt: "Scripts and tactics for approaching your manager confidently with performance proof.", link: "#" }
+];
+
+  const topicColorClass = {
+    'Dating': 'text-koko-pink',
+    'Money': 'text-koko-mint',
+    'Adulting': 'text-koko-lavender',
+    'Life After Heartbreak': 'text-koko-blue'
+  };
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, c =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
+    );
+  }
+
+  // ---------- Navigation ----------
+  function navigateTo(pageId) {
+    document.querySelectorAll('.page-section').forEach(section => {
+      section.classList.remove('active-page');
+    });
+
+    const targetPage = document.getElementById(`page-${pageId}`);
+    if (targetPage) targetPage.classList.add('active-page');
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.classList.remove('text-koko-coral', 'font-bold');
+      btn.classList.add('text-gray-300');
+    });
+
+    const activeNavBtn = document.getElementById(`nav-${pageId}`);
+    if (activeNavBtn) {
+      activeNavBtn.classList.remove('text-gray-300');
+      activeNavBtn.classList.add('text-koko-coral', 'font-bold');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+
+  function openTopicCategory(categoryName) {
+    navigateTo('topics');
+    filterTopicList(categoryName);
+  }
+
+  // ---------- Topics ----------
+  function renderPostCards(list) {
+    const container = document.getElementById('topics-posts-container');
+    let html = '';
+
+    if (feedError) {
+      html += `<p class="md:col-span-2 text-xs text-koko-coral">Live Substack feed did not load (${escapeHtml(feedError)}). Showing sample posts.</p>`;
+    }
+
+    if (list.length === 0) {
+      html += '<p class="md:col-span-2 text-sm text-gray-400">No posts match that filter yet.</p>';
+      container.innerHTML = html;
+      return;
+    }
+
+    html += list.map(post => `
+      <div class="bg-koko-cardBg border border-white/10 rounded-2xl p-6 flex flex-col justify-between glow-hover space-y-4">
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-montserrat font-extrabold uppercase px-2.5 py-1 rounded-md bg-white/5 border border-white/10 ${topicColorClass[post.topic] || 'text-koko-coral'}">
+              ${escapeHtml(post.topic)}
+            </span>
+            <span class="text-xs text-gray-500 font-mono">${escapeHtml(post.date)}</span>
+          </div>
+          <h3 class="font-montserrat font-extrabold text-lg text-white">${escapeHtml(post.title)}</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">${escapeHtml(post.excerpt)}</p>
+        </div>
+        <a href="${escapeHtml(post.link)}" target="_blank" rel="noopener" class="text-xs font-montserrat font-bold text-koko-coral flex items-center gap-1 hover:underline pt-2">
+          READ FULL ENTRY <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    `).join('');
+
+    container.innerHTML = html;
+  }
+
+  function applyFilters() {
+    const query = document.getElementById('topic-search-input').value.toLowerCase();
+    const filtered = postsData.filter(p =>
+      (activeTopic === 'All' || p.topic === activeTopic) &&
+      (p.title.toLowerCase().includes(query) ||
+       p.topic.toLowerCase().includes(query) ||
+       p.excerpt.toLowerCase().includes(query))
+    );
+    renderPostCards(filtered);
+  }
+
+  function filterTopicList(category) {
+    activeTopic = category;
+    applyFilters();
+  }
+
+  function filterTopicsBySearch() {
+    applyFilters();
+  }
+
+  // ---------- Substack feed ----------
+  async function fetchFeedItems() {
+    const encoded = encodeURIComponent(SUBSTACK_FEED);
+    // Added additional public CORS proxies to ensure reliability in sandboxed environments
+    const sources = [
+      { url: `https://api.rss2json.com/v1/api.json?rss_url=${encoded}`, type: 'json' },
+      { url: `https://corsproxy.io/?${encoded}`, type: 'xml' },
+      { url: `https://api.allorigins.win/raw?url=${encoded}`, type: 'xml' },
+      { url: `https://api.codetabs.com/v1/proxy?quest=${encoded}`, type: 'xml' }
+    ];
+
+    let lastError = 'network fetch blocked or restricted';
+
+    for (const source of sources) {
+      try {
+        const res = await fetch(source.url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+
+        if (source.type === 'json') {
+          const data = JSON.parse(text);
+          if (data.status !== 'ok') throw new Error('rss2json status ' + data.status);
+          return data.items.map(i => ({
+            title: i.title || '',
+            link: i.link || '#',
+            pubDate: i.pubDate || '',
+            description: i.description || '',
+            categories: i.categories || []
+          }));
+        }
+
+        const xml = new DOMParser().parseFromString(text, 'text/xml');
+        const items = [...xml.querySelectorAll('item')];
+        if (items.length === 0) throw new Error('No item tags found in XML');
+
+        return items.map(el => ({
+          title: el.querySelector('title')?.textContent || '',
+          link: el.querySelector('link')?.textContent || '#',
+          pubDate: el.querySelector('pubDate')?.textContent || '',
+          description: el.querySelector('description')?.textContent || '',
+          categories: [...el.querySelectorAll('category')].map(c => c.textContent)
+        }));
+      } catch (err) {
+        lastError = err.message;
+        console.warn('Feed source failed, attempting next proxy:', source.url, err);
+      }
+    }
+
+    throw new Error(lastError);
+  }
+
+  async function loadSubstackPosts() {
+    try {
+      const items = await fetchFeedItems();
+      if (!items || !items.length) throw new Error('feed had no posts');
+
+      postsData = items.slice(0, 12).map(item => {
+        const plain = new DOMParser().parseFromString(item.description, 'text/html').body.textContent.trim();
+        const topic = item.categories.find(c => topicColorClass[c]) || 'General';
+        const date = new Date(item.pubDate);
+        return {
+          title: item.title,
+          topic,
+          date: isNaN(date) ? '' : date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+          excerpt: plain.length > 160 ? plain.slice(0, 160).trim() + '…' : plain,
+          link: item.link
+        };
+      });
+
+      feedError = '';
+      console.log(`Substack feed loaded successfully: ${postsData.length} posts`);
+    } catch (err) {
+      feedError = err.message;
+      console.info('Substack live fetch unavailable in sandbox environment. Displaying curated sample posts.', err);
+    }
+
+    filterTopicList(activeTopic);
+  }
+
+  // ---------- Confessional ----------
+  async function handleConfessionalSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const category = document.getElementById('confession-category').value;
+    const text = document.getElementById('confession-text').value;
+    const alias = document.getElementById('confession-alias').value || 'Anonymous Secret Holder';
+
+    // The disclaimer answer, using the exact wording shown on the site
+  const checked = form.querySelector('input[name="disclaimer"]:checked');
+  const disclaimerAnswer = checked ? checked.parentElement.textContent.trim() : '';
+
+    // Recent Confessions card (kept as before)
+    const list = document.getElementById('recent-confessions-list');
+    const newCard = document.createElement('div');
+    newCard.className = 'bg-koko-darkBg/80 border border-koko-coral/30 rounded-2xl p-4 text-xs space-y-2 animate-pulse';
+    newCard.innerHTML = `
+      <div class="flex items-center justify-between text-koko-coral font-bold">
+        <span>Category: ${escapeHtml(category)}</span>
+        <span class="text-[10px] text-gray-400">By "${escapeHtml(alias)}"</span>
+      </div>
+      <p class="text-gray-200">"${escapeHtml(text)}"</p>
+    `;
+    list.prepend(newCard);
+
+    // Send to Google Form (skipped until the form ID is filled in)
+    if (!GOOGLE_FORM_ACTION.includes('YOUR_FORM_ID')) {
+      const data = new FormData();
+      data.append(ENTRY.category, category);
+      data.append(ENTRY.story, text);
+      data.append(ENTRY.alias, alias);
+      data.append(ENTRY.disclaimer, disclaimerAnswer);
+      try {
+        await fetch(GOOGLE_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: data });
+      } catch (err) {
+        console.error('Google Form submit failed:', err);
+      }
+    }
+
+    form.reset();
+    showToast('Confession submitted anonymously! Thank you for sharing.');
+  }
+
+  // ---------- Other handlers ----------
+  const NEWSLETTER_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdSWo2PGY0f6kcGJM6T82dJ7dpYOWVovX7NFyxROAgm7qnjgA/formResponse';
+const NEWSLETTER_ENTRY = 'entry.1885685514';
+
+async function handleNewsletterSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const email = form.querySelector('input[type="email"]').value;
+
+  const data = new FormData();
+  data.append(NEWSLETTER_ENTRY, email);
+
+  try {
+    await fetch(NEWSLETTER_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: data });
+  } catch (err) {
+    console.error('Newsletter submit failed:', err);
+  }
+
+  showToast('Welcome to the Krew! Check your inbox soon.');
+  form.reset();
+}
+
+  let isPlaying = false;
+  function toggleAudioPreview() {
+    const icon = document.getElementById('mini-player-icon');
+    const progress = document.getElementById('audio-progress');
+
+    if (!isPlaying) {
+      isPlaying = true;
+      icon.className = 'fa-solid fa-pause';
+      progress.style.width = '75%';
+      showToast('Playing episode preview sample...');
+    } else {
+      isPlaying = false;
+      icon.className = 'fa-solid fa-play';
+      progress.style.width = '33%';
+    }
+  }
+
+  function triggerMerchToast() {
+    showToast('Merch catalog loading... New drop coming soon!');
+  }
+
+  function playVodModal(title, showType) {
+    showToast(`Loading stream replay: "${title}" (${showType})`);
+  }
+
+  function showToast(message) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'bg-koko-cardBg border border-koko-coral/50 text-white font-montserrat font-bold text-xs px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 toast-animate pointer-events-auto';
+    toast.innerHTML = `
+      <i class="fa-solid fa-circle-check text-koko-mint text-base"></i>
+      <span>${escapeHtml(message)}</span>
+    `;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transition = 'opacity 0.3s';
+      setTimeout(() => toast.remove(), 300);
+    }, 4000);
+  }
+
+  // ---------- Startup ----------
+  function init() {
+    filterTopicList('All');
+    loadSubstackPosts();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
+
+</body>
+</html>
